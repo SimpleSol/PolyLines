@@ -29,6 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <provider
+            android:authorities="${applicationId}"
+            android:name=".sqlite.SQLiteProvider"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -141,9 +141,6 @@ public class MainActivity extends AppCompatActivity implements
         values.put(Locations.Columns.LONGITUDE, location.getLongitude());
         values.put(Locations.Columns.LATITUDE, location.getLatitude());
         getContentResolver().insert(Locations.URI, values);
-        final Cursor cursor = getContentResolver().query(Locations.URI, null, null, null, null);
-        Log.d("DataBase", cursor.toString());
-        cursor.close();
     }
 
 }

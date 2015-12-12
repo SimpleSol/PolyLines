@@ -85,7 +85,9 @@ public class SQLiteProvider extends ContentProvider {
             db.execSQL("CREATE TABLE IF NOT EXISTS " + Locations.TABLE +
                     "(_id INTEGER PRIMARY KEY, " +
                     "longitude REAL, " +
-                    "latitude REAL);");
+                    "latitude REAL, " +
+                    "UNIQUE(longitude) ON CONFLICT IGNORE, " +
+                    "UNIQUE(latitude) ON CONFLICT IGNORE);");
         }
 
         @Override
